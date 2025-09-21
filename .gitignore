@@ -1,0 +1,25 @@
+# Ignore a directory of files with a specific name
+# e.g., a virtual environment
+venv/
+
+# Ignore files with a specific file extension
+*.log
+*.swp
+
+# Ignore all files in the build directory, regardless of the folder name
+# This ignores the production build from Vite
+/frontend/dist/
+
+# Python-specific files to ignore
+__pycache__/
+
+# Node.js-specific files to ignore
+# This ignores the node modules directory
+/frontend/node_modules/
+
+# Ignore environment variables files
+.env
+.env.local
+
+# IDE-specific files
+.vscode/
