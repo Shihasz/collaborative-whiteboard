@@ -2,6 +2,8 @@
 
 A real-time collaborative whiteboard application built with **FastAPI** and **React**. This project serves as a showcase for building full-stack web applications with modern technologies.
 
+---
+
 ## 🚀 Getting Started
 
 Follow these instructions to get a copy of the project up and running on your local machine.
@@ -10,10 +12,16 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 You will need the following tools installed on your system:
 
-- **Docker Desktop** with **WSL2** integration enabled
-- **VS Code** with the **WSL extension**
-- **Node.js** and **npm**
-- **Python 3.8+** and **pip**
+- **Docker Desktop** (with WSL2 integration enabled on Windows)
+- **VS Code** with the **WSL extension** (on Windows)
+- **Node.js** and **npm** (for local development)
+- **Python 3.8+** and **pip** (for local development)
+
+### Note on Cross-Platform Compatibility
+
+This project is configured to run in a Docker environment, which makes it compatible across different operating systems including Windows, macOS, and Linux. The Docker containers provide an isolated and consistent environment, so you do not need to worry about OS-specific dependencies.
+
+---
 
 ### Installation
 
@@ -24,45 +32,22 @@ You will need the following tools installed on your system:
     cd collaborative-whiteboard
     ```
 
-2.  **Backend Setup:**
-    Navigate to the backend directory, create and activate a virtual environment, and install the required dependencies.
-
+2.  **Build and run with Docker Compose:**
     ```bash
-    cd backend
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
+    docker-compose up --build
     ```
+    This command builds the Docker images for both the frontend and backend and starts the services.
 
-3.  **Frontend Setup:**
-    Navigate to the frontend directory and install the Node.js dependencies.
-    ```bash
-    cd ../frontend
-    npm install
-    ```
+The frontend will be available at `http://localhost:5173`, and the backend API at `http://localhost:8000`.
 
-## ▶️ Running the Application
-
-Once both the backend and frontend are set up, you can run them concurrently.
-
-### 1. Run the Backend (in a separate terminal)
-
-Make sure your virtual environment is active.
-
-```bash
-cd backend
-uvicorn main:app --reload
-```
-
-### 2. Run the Frontend (in another terminal)
-
-```bash
-cd frontend
-npm run dev
-```
-
-The frontend will be available at http://localhost:5173, and the backend API at http://localhost:8000.
+---
 
 ## 🤝 Contributing
 
-Contributions are what make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+Contributions are what make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
