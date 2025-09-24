@@ -1,12 +1,13 @@
 import React from "react";
 import "./index.css";
+import Whiteboard from "./components/Whiteboard";
+import Toolbar from "./components/Toolbar";
 
 function App() {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-500">
-        Hello, Collaborative Whiteboard!
-      </h1>
+    <div className="w-screen h-screen overflow-hidden">
+      <Toolbar />
+      <Whiteboard />
     </div>
   );
 }
